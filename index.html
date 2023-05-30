@@ -18,10 +18,32 @@
     gtag('config', 'G-WS99CL5HDW');
   </script>
    <!-- Aviso de cookies -->
-  <div id="cookie-notice">
-    <p>Este site utiliza cookies para garantir a melhor experiência ao usuário. Ao continuar navegando, você concorda com o uso de cookies. <button onclick="hideCookieNotice()">Aceitar</button></p>
-  </div>
   <style>
+    .cookie-card {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+    }
+
+    .cookie-card p {
+      margin-bottom: 10px;
+    }
+
+    .cookie-card button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
     body {
       max-width: 800px;
       margin: 0 auto;
@@ -82,6 +104,10 @@
 </head>
 
 <body>
+  <div class="cookie-card">
+    <p>Este site utiliza cookies para garantir a melhor experiência ao usuário. Ao continuar navegando, você concorda com o uso de cookies.</p>
+    <button onclick="hideCookieCard()">Aceitar</button>
+  </div>
   <header>
     <h1>Curriculum Vitae - Tiago Carneiro Vizoto</h1>
   </header>
@@ -143,10 +169,10 @@
       <li>LinkedIn: <a href="https://www.linkedin.com/in/tiagovizoto/">https://www.linkedin.com/in/tiagovizoto/</a></li>
     </ul>
   </footer>
-   <script>
+  <script>
     // Função para esconder o aviso de cookies
-    function hideCookieNotice() {
-      document.getElementById('cookie-notice').style.display = 'none';
+    function hideCookieCard() {
+      document.querySelector('.cookie-card').style.display = 'none';
     }
   </script>
 </body>
